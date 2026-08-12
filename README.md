@@ -16,11 +16,22 @@ __This code is established on [mmdetection](https://github.com/open-mmlab/mmdete
 
 ```bash
 pytorch>=1.8.0
-cuda 10.2
 python>=3.8
-mmcv-full 1.3.10
-```
+mmcv-full==1.3.10
+torchvision==0.9.1
+mmdet==2.14
+yapf==0.32
+pycocotools
+imgaug
 
+```
+### Installation commands
+```bash
+
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+pip install mmcv-full==1.3.10 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.8.0/index.html
+pip install mmdet==2.14.0 yapf==0.32.0 pycocotools imgaug
+```
 ## GPU requirements
 
 We train our model on 8 V100 GPUs.
