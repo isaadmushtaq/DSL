@@ -48,11 +48,9 @@ We train our model on 8 V100 GPUs.
 
 For this purpose, a simplified rule is the linear scaling rule:\
 <br>
-$$
-LR_{new}​=LR_{original}​× \frac{B_{original}​}{B_{new}​}
-$$
+$LR_{new}​=LR_{original}​ \times \frac{B_{new}​}{B_{original}​}$
 
-where, B = Batch Size and LR = Learning Rate 
+where, $B$ = Batch Size and $LR$ = Learning Rate 
 <br><br>
 For example, suppose the paper used:
 ```bash
@@ -61,9 +59,7 @@ samples_per_gpu = 2
 LR = 0.01
 ```
 Then
-$
-B_{original}= 2 × 8 = 16
-$
+$B_{original}= 2 \times 8 = 16$
 <br><br>
 If you use:
 ```bash
@@ -71,7 +67,7 @@ GPUs = 2
 samples_per_gpu = 4
 ```
 Then
-$B_{new}= 2 × 4 = 8$
+$B_{new}= 2 \times 4 = 8$
 <br><br>
 Therefore
 $ 
