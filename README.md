@@ -36,6 +36,41 @@ pip install mmdet==2.14.0 yapf==0.32.0 pycocotools imgaug
 
 We train our model on 8 V100 GPUs.
 
+## General Guidelines
+### Calculate Learning Rate:
+
+A simplified rule is the linear scaling rule:\
+<br>
+$$
+LR_{new}​=LR_{original}​× \frac{B_{original}​}{B_{new}​}
+$$
+
+where, B = Batch Size and LR = Learning Rate 
+<br><br>
+For example, suppose the paper used:
+```bash
+GPUs = 8
+samples_per_gpu = 2
+LR = 0.01
+```
+Then
+$
+B_{original}= 2 × 8 = 16
+$
+<br><br>
+If you use:
+```bash
+GPUs = 2
+samples_per_gpu = 4
+```
+Then
+$B_{new}= 2 × 4 = 8$
+<br><br>
+Therefore
+$ 
+LR_{new}​=0.01 ​× \frac{8​}{16​} = 0.005
+$
+
 ## Download ImageNet pre-trained models for initializing DSL.
 
 Download [resnet50_rla_2283.pth](https://drive.google.com/file/d/1cetP1SdOiwznLxlBUaHG8Q8c4RIwToWW/view) (Google) [resnet50_rla_2283.pth](https://pan.baidu.com/s/1GrNxNariVpb9S5EUFW1eng) (Baidu, extract code: 5lf1) for later DSL training.
