@@ -70,9 +70,7 @@ Then
 $B_{new}= 2 \times 4 = 8$
 <br><br>
 Therefore
-$ 
-LR_{new}​=0.01 ​× \frac{8​}{16​} = 0.005
-$
+$LR_{new}​=0.01 ​× \frac{8​}{16​} = 0.005$
 
 ## Download ImageNet pre-trained models for initializing DSL.
 
