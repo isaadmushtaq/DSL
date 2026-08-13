@@ -39,7 +39,14 @@ We train our model on 8 V100 GPUs.
 ## General Guidelines
 ### Calculate Learning Rate:
 
-A simplified rule is the linear scaling rule:\
+**Note on Reproducing Results**
+> The training results reported in section [Testing](#testing) were obtained using **8 GPUs** with a
+> **learning rate of 0.01**. When reproducing these results with a different
+> number of GPUs, the learning rate should be adjusted according to the
+> effective batch size, which depends on both the number of GPUs and
+> `samples_per_gpu`.
+
+For this purpose, a simplified rule is the linear scaling rule:\
 <br>
 $$
 LR_{new}​=LR_{original}​× \frac{B_{original}​}{B_{new}​}
