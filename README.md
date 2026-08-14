@@ -192,11 +192,11 @@ cp ori_data/coco/unlabled2017/* data/semicoco/unlabel_images/full/
 ```
 
 ### 2. Download the corresponding files
-Download (`STAC_JSON.tar.gz`) and unzip it; move (`coco/annotations/instances_unlabeled2017.json`) to (`data_list/coco_semi/semi_supervised/`) dir
+Download (`STAC_JSON.tar`) and unzip it; move (`coco/annotations/instances_unlabeled2017.json`) to (`data_list/coco_semi/semi_supervised/`) dir
 ```bash
 cd ${project_root_dir}/ori_data
 wget https://storage.cloud.google.com/gresearch/ssl_detection/STAC_JSON.tar
-tar -xf STAC_JSON.tar.gz
+tar -xf STAC_JSON.tar
 
 # resulting files
 # coco/annotations/instances_unlabeled2017.json
